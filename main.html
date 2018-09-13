@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메인화면</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Pen+Script&amp;subset=korean" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 20px;
+            background:url('background.png');
+            background-repeat: no-repeat;
+            padding:0;
+            margin:0;
+        }
+        h1{
+            color: #29bf89;
+            font-family: 'Nanum Pen Script', sans-serif;
+            font-size: 50pt;
+        }
+        .bottom_background {
+            width:100%;
+            height:50vh;
+            background:transparent url('wavy background.png') repeat-x 0 0;
+            position:fixed;
+            bottom:0;
+
+        }
+        #phone_img{
+            position:absolute;
+            left: 1200px;
+            top: -300px;
+        }
+        #header_logo{
+            width:300px;
+            padding:10px;
+        }
+        .accounts_box{
+            float:right;
+            padding:10px;
+        }
+        #notice_form{
+            font-size:inherit;
+            padding-top:1em;
+            border:0; 
+            outline:0;
+            border-bottom: 1px solid black;
+            background-image:url('1.png');
+            background-repeat:no-repeat;
+            background-position:right 1.2em;
+            background-size:20px;
+            background-color:transparent;
+        }
+        .googleplay_wrapper{
+            position:relative;
+        }
+        .googleplay{
+            position:absolute; 
+            left:10%; 
+            top:10em;
+            color:white
+        }
+        .fadeIn{
+            opacity: 1;
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 1s;
+        }
+        
+        @keyframes fadeInOpacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .flipInX {
+          -webkit-backface-visibility: visible !important;
+          backface-visibility: visible !important;
+          -webkit-animation-name: flipInX;
+          animation-name: flipInX
+        }
+        @-webkit-keyframes flipInX {
+          0% {
+            -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+            opacity: 0
+          }
+          40% {
+            -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in
+          }
+          60% {
+            -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            opacity: 1
+          }
+          80% {
+            -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+          }
+          100% {
+            -webkit-transform: perspective(400px);
+            transform: perspective(400px)
+          }
+        }
+
+        @keyframes flipInX {
+          0% {
+            -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+            opacity: 0
+          }
+          40% {
+            -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in
+          }
+          60% {
+            -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            opacity: 1
+          }
+          80% {
+            -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+          }
+          100% {
+            -webkit-transform: perspective(400px);
+            transform: perspective(400px)
+          }
+        }
+        .animated {
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img id="header_logo" src="logo.png" alt="">
+        <div class="accounts_box">
+            <a id="register_button" href="#"><img src="register%20btn.png" alt=""></a>
+            <a id="login_button" href="#"><img src="login%20btn.png" alt=""></a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_title fadeIn">
+            <ul>
+               <h1>원하는 공지만 받자!</h1>
+               <p>성균관대학교 공지알리미는 학교 홈페이지를 비롯한 단과대, 기타 기관들의 <br>공지사항을 알림으로 받아볼 수 있는 서비스입니다. 사용자는 키워드를 설정하여<br> 원하는 종류의 공지사항에 대한 알림을 받을 수 있습니다. </p> 
+            </ul>
+        </div>
+        <div class="main_search flipInX animated">
+           <form action="#" method="GET">
+               <ul>
+                   <h2>나는 <input id="notice_form" name="search_word" type="text"> 에 대한 공지를 찾아보고 싶어!</h2>    
+               </ul>
+           </form>
+        </div>
+    </div>
+    <div class="bottom_background">
+       <div class="googleplay_wrapper">
+           <ul class="googleplay">
+               <p>더 많은 기능을 써보고 싶다면?</p>
+               <img id="googleplay_img" src="android%20download%20button.png" alt="">
+               <p>IOS 버전도 출시 준비중! 조금만 기다려 주세요!</p>
+           </ul>
+           <img id="phone_img" src="phone%20picture.png" alt="">
+       </div>
+    </div>
+</body>
+</html>
