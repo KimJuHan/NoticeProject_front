@@ -1,0 +1,139 @@
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.header {
+    margin-left: 100px;
+    float: left;
+}
+
+.menu {
+    background-color: #3c465b;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.gongjialimi {
+    margin: 10px;
+    color: ghostwhite;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.slogan {
+    font-size: 20px;
+    color: #d84f51;
+    padding: 0px 30px 0px 39px;
+    margin: 0;
+}
+
+.dashboard {
+    margin-top: 20px;
+}
+.dashboard, .allnotice, .hakbunotice, .etcnotice{
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    padding: 6px 8px 6px 16px;
+    font-size: 27px;
+    color: ghostwhite;
+    background-color: #3c465b;
+}
+/*#3b414f*/
+.dashboard:hover, .allnotice:hover, .hakbunotice:hover, .etcnotice:hover {
+    color: #51d2b7;
+    border-left: 3px solid #51d2b7;
+    background-color: #3b414f;
+}
+
+.dashboard:focus, .allnotice:focus, .hakbunotice:focus, .etcnotice:focus {
+    color: #51d2b7;
+    border-left: 3px solid #51d2b7;
+    background-color: #3b414f;
+}
+
+.fa-angle-down {
+    float: right;
+    padding-right: 8px;
+}
+
+.dashboard-container, .allnotice-container, .hakbunotice-container, .etcnotice-container {
+    position: abosolute;
+    display: none;
+    padding-left: 8px;
+    text-decoration: none;
+    background-color: #3c465b,
+}
+
+.show {display:block}
+
+.dashboard-container a,.allnotice-container a, .hakbunotice-container a, .etcnotice-container a {
+    text-decoration: none;
+    display: block;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    color: ghostwhite;
+}
+
+.dashboard-container a:hover,.allnotice-container a:hover, .hakbunotice-container a:hover, .etcnotice-container a:hover {
+    color: #51d2b7;
+}
+
+.active {
+    color: #51d2b7;
+    border-left: 3px solid #51d2b7;
+    background-color: #3b414f;
+}
+
+.footer-menu {
+    margin-top: 370px;
+}
+.footer-menu button {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    border: none;
+    background: none;
+    font-size: 33px;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    cursor: pointer;
+    }
+
+.profilepic {
+    width: 80px;
+    margin-top: 20px;
+}
+
+.profile {
+    position: absolute;
+    text-align: right;
+    margin-left: 83px;
+    margin-top: 20px;
+}
+
+.name {
+    color: white;
+    font-size: 30px;
+    padding: none;
+    margin: none;
+    line-height: 0px;
+}
+
+.email {
+    font-size: 16px;
+    color: white;
+}
