@@ -16,7 +16,11 @@
         h1{
             color: #29bf89;
             font-family: 'Nanum Pen Script', sans-serif;
-            font-size: 50pt;
+            font-size: 70pt;
+        }
+        .main{
+            width: 100%;
+            height: 100%;
         }
         .bottom_background {
             width:100%;
@@ -24,7 +28,6 @@
             background:transparent url('images/wavy background.png') repeat-x 0 0;
             position:fixed;
             bottom:0;
-
         }
         #phone_img{
             position:absolute;
@@ -40,6 +43,7 @@
             padding:10px;
         }
         #notice_form{
+            position: relative;
             font-size:inherit;
             padding-top:1em;
             border:0; 
@@ -66,6 +70,12 @@
             animation-iteration-count: 1;
             animation-timing-function: ease-in;
             animation-duration: 1s;
+        }
+        #notice_form .fa-search {
+            position: absolute;
+            right: 65px;
+            top: 23px;
+            color: aliceblue;
         }
         
         @keyframes fadeInOpacity {
@@ -149,7 +159,7 @@
 </head>
 <body>
     <div class="header">
-        <img id="header_logo" src="logo.png" alt="">
+        <img id="header_logo" src="images/logo.png" alt="">
         <div class="accounts_box">
             <a id="register_button" href="#"><img src="images/register%20btn.png" alt=""></a>
             <a id="login_button" href="#"><img src="images/login%20btn.png" alt=""></a>
@@ -158,14 +168,14 @@
     <div class="main">
         <div class="main_title fadeIn">
             <ul>
-               <h1>원하는 공지만 받자!</h1>
-               <p>성균관대학교 공지알리미는 학교 홈페이지를 비롯한 단과대, 기타 기관들의 <br>공지사항을 알림으로 받아볼 수 있는 서비스입니다. 사용자는 키워드를 설정하여<br> 원하는 종류의 공지사항에 대한 알림을 받을 수 있습니다. </p> 
+               <h1 style="margin-top: 30px; margin-bottom: 45px;">원하는 공지만 받자!</h1>
+               <p style="font-size: 24px">성균관대학교 공지알리미는 학교 홈페이지를 비롯한 단과대, 기타 기관들의 <br>공지사항을 알림으로 받아볼 수 있는 서비스입니다. 사용자는 키워드를 설정하여<br> 원하는 종류의 공지사항에 대한 알림을 받을 수 있습니다. </p>
             </ul>
         </div>
         <div class="main_search flipInX animated">
            <form action="#" method="GET">
                <ul>
-                   <h2>나는 <input id="notice_form" name="search_word" type="text"> 에 대한 공지를 찾아보고 싶어!</h2>    
+                   <h2>나는 <input id="notice_form" name="search_word" type="text" style="color: #29bf89; text-align: center"></i> 에 대한 공지를 찾아보고 싶어!</h2>
                </ul>
            </form>
         </div>
@@ -175,7 +185,6 @@
            <ul class="googleplay">
                <p>더 많은 기능을 써보고 싶다면?</p>
                <img id="googleplay_img" src="images/android%20download%20button.png" alt="">
-               <p>IOS 버전도 출시 준비중! 조금만 기다려 주세요!</p>
            </ul>
            <img id="phone_img" src="images/phone%20picture.png" alt="">
        </div>
